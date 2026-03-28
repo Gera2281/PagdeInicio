@@ -12,7 +12,7 @@
         <thead>
             <tr>
                 <!--<th>ID</th>-->
-                <th>Nombre</th>
+                <th>Nombree</th>
                 <th>Descripcion</th>
                 <th>Atendido</th>
                 <th>Fecha de entrega</th>
