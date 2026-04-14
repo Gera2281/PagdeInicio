@@ -11,7 +11,7 @@
     <table class="table">
         <thead>
             <tr>
-                <!--<th>ID</th>-->
+                <!--<th>I</th>-->
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Atendido</th>
