@@ -5,7 +5,7 @@
 @section('contenido')
     <h2 class="text-center mb-4">Nueva tarea</h2>
     <div class="container mt-4">
-        <form action="{{ route('tareas.store') }}" method="POST">
+        <form action="{{ route('tareas.storeT') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>

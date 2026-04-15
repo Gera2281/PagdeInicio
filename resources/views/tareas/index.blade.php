@@ -5,7 +5,7 @@
 @section('contenido')
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="mb-0">Aqui iran las tareas</h2>
-    <a href="{{ route('tareas.create') }}" class="btn btn-primary mb-2 ">Crear tarea</a>
+    <a href="{{ route('tareas.createT') }}" class="btn btn-primary mb-2 ">Crear tarea</a>
 </div>
 <div class="container mt-4">
     <table class="table">

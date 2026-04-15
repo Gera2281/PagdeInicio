@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tarea;
-use App\Models\Producto;
 
 class TareaController
 {
@@ -19,12 +18,12 @@ class TareaController
         return view('tareas.index', compact('tareas'));
     }
 
-    public function create()
+    public function createT()
     {
         return view('tareas.create');
     }
 
-    public function store(Request $request)
+    public function storeT(Request $request)
     {
         $tarea = new Tarea();
         $tarea->nombre = $request->nombre;

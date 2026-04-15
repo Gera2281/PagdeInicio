@@ -9,5 +9,5 @@ Route::get('/productos', [ProductoController::class, 'productos'])->name('produc
 Route::get('/createP', [ProductoController::class, 'createP'])->name('productos.createP');
 Route::post('/storeP', [ProductoController::class, 'storeP'])->name('productos.storeP');
 Route::get('/tareas', [TareaController::class, 'tareas'])->name('tareas');
-Route::get('/create', [TareaController::class, 'create'])->name('tareas.create');
-Route::post('/store', [TareaController::class, 'store'])->name('tareas.store');
+Route::get('/createT', [TareaController::class, 'createT'])->name('tareas.createT');
+Route::post('/storeT', [TareaController::class, 'storeT'])->name('tareas.storeT');
