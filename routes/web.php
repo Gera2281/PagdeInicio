@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TareaController;
+use App\Http\Controllers\ProductoController;
 
 Route::get('/', [TareaController::class, 'inicio'])->name('inicio');
-Route::get('/productos', [TareaController::class, 'productos'])->name('productos');
+Route::get('/productos', [ProductoController::class, 'productos'])->name('productos');
+Route::get('/createP', [ProductoController::class, 'createP'])->name('productos.createP');
+Route::post('/storeP', [ProductoController::class, 'storeP'])->name('productos.storeP');
 Route::get('/tareas', [TareaController::class, 'tareas'])->name('tareas');
 Route::get('/create', [TareaController::class, 'create'])->name('tareas.create');
-Route::get('/createP', [TareaController::class, 'createP'])->name('productos.createP');
 Route::post('/store', [TareaController::class, 'store'])->name('tareas.store');
-Route::post('/storeP', [TareaController::class, 'storeP'])->name('productos.storeP');

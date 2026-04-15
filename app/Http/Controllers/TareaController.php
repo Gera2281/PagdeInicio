@@ -13,29 +13,6 @@ class TareaController
         return view('Inicio');
     }
 
-    public function productos()
-    {
-        $productos = Producto::all();
-        return view('layouts.partials.productos', compact('productos'));
-    }
-
-    public function createP()   
-    {
-        return view('productos.create');
-    }
-
-    public function storeP(Request $request)
-    {
-        $producto = new Producto();
-        $producto->imagen = $request->imagen;
-        $producto->titulo = $request->titulo;
-        $producto->descripcion = $request->descripcion;
-        $producto->precio = $request->precio;
-        $producto->save();
-
-        return redirect()->route('productos');
-    }
-
     public function tareas()
     {
         $tareas = Tarea::all();
