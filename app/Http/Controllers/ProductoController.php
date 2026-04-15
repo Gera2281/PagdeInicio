@@ -29,7 +29,15 @@ class ProductoController
     public function storeP(Request $request)
     {
         $producto = new Producto();
-        $producto->imagen = $request->imagen;
+        
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $destinationPath = 'img/';
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $uploadSuccess = $request->file('imagen')->move($destinationPath, $filename);
+            $producto->imagen = $destinationPath . $filename;
+        }
+
         $producto->titulo = $request->titulo;
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
