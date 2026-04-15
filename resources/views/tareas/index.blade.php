@@ -11,8 +11,8 @@
     <table class="table">
         <thead>
             <tr>
-                <!--<th>ID</th>-->
-                <th>Nombree</th>
+                <!--<th>I</th>-->
+                <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Atendido</th>
                 <th>Fecha de entrega</th>
