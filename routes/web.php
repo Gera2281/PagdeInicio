@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TareaController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ServicioController;
 
 Route::get('/', [TareaController::class, 'inicio'])->name('inicio');
 Route::get('/productos', [ProductoController::class, 'productos'])->name('productos');
