@@ -34,4 +34,37 @@ class TareaController
 
         return redirect()->route('tareas');
     }
+
+    public function editT($id)
+    {
+        $tarea = Tarea::findOrFail($id);
+        return view('tareas.edit', compact('tarea'));
+    }
+
+    public function updateT(Request $request, $id)
+    {
+        $tarea = Tarea::findOrFail($id);
+        $tarea->nombre = $request->nombre;
+        $tarea->descripcion = $request->descripcion;
+        $tarea->atendido = $request->has('atendido') ? 1 : 0;
+        $tarea->entrega = $request->entrega;
+        $tarea->save();
+
+        return redirect()->route('tareas');
+    }
+
+    public function destroyT($id)
+    {
+        $tarea = Tarea::findOrFail($id);
+        $tarea->delete();
+
+        return redirect()->route('tareas');
+    }
+
+    // Ver detalle
+    public function verT($id)
+    {
+        $tarea = Tarea::findOrFail($id);
+        return view('tareas.verT', compact('tarea'));
+    }
 }

@@ -12,3 +12,7 @@ Route::post('/storeP', [ProductoController::class, 'storeP'])->name('productos.s
 Route::get('/tareas', [TareaController::class, 'tareas'])->name('tareas');
 Route::get('/createT', [TareaController::class, 'createT'])->name('tareas.createT');
 Route::post('/storeT', [TareaController::class, 'storeT'])->name('tareas.storeT');
+Route::get('/editT/{id}', [TareaController::class, 'editT'])->name('tareas.editT');
+Route::put('/updateT/{id}', [TareaController::class, 'updateT'])->name('tareas.updateT');
+Route::get('/verT/{id}', [TareaController::class, 'verT'])->name('tareas.verT');
+Route::delete('/destroyT/{id}', [TareaController::class, 'destroyT'])->name('tareas.destroyT');
