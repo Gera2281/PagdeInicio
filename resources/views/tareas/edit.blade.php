@@ -24,8 +24,8 @@
             <label for="entrega" class="form-label">Fecha de entrega</label>
             <input type="date" class="form-control" id="entrega" name="entrega" value="{{ $tarea->entrega }}">
         </div>
-        <button type="submit" class="btn btn-primary">Actualizar</button>
-        <a href="{{ route('tareas') }}" class="btn btn-secondary">Cancelar</a>
+        <button type="submit" class="btn btn-outline-primary">Actualizar</button>
+        <a href="{{ route('tareas') }}" class="btn btn-outline-secondary">Cancelar</a>
     </form>
 </div>
 @endsection

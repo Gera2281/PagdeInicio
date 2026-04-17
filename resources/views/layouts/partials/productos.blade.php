@@ -7,7 +7,7 @@
     <h2 class="mb-0">Productos más vendidos</h2>
     <a href="{{ route('productos.createP') }}" class="btn btn-outline-primary">Crear producto</a>
 </div>
-<div class="row g-5">
+<div class="row g-5 text-center">
     @foreach ($productos as $producto)
     <div class="col-6 col-md-4 col-lg-3">
         @component('layouts.componentes.card')

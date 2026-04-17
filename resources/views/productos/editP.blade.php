@@ -5,7 +5,7 @@
 @section('contenido')
     <div class="container mt-4">
         <div class="card shadow-sm">
-            <div class="card-header bg-warning text-dark">
+            <div class="card-header bg-success text-white">
                 <h4 class="mb-0">Editar Producto</h4>
             </div>
             <div class="card-body">
@@ -18,7 +18,7 @@
                         @if($producto->imagen)
                             <div class="mb-3">
                                 <img src="{{ asset($producto->imagen) }}" class="img-thumbnail" width="150" alt="Imagen actual">
-                                <p class="text-muted small">Imagen actual</p>
+                                <p class="text-muted small">Actual</p>
                             </div>
                         @else
                             <p class="text-muted small">No tiene imagen actualmente.</p>
@@ -40,8 +40,8 @@
                     </div>
                     
                     <div class="mt-4">
-                        <a href="{{ route('productos') }}" class="btn btn-secondary">Cancelar</a>
-                        <button type="submit" class="btn btn-primary">Actualizar Producto</button>
+                        <a href="{{ route('productos') }}" class="btn btn-outline-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-outline-primary">Actualizar Producto</button>
                     </div>
                 </form>
             </div>

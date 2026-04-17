@@ -1,10 +1,10 @@
 @extends('layouts.base')
 
-@section('titulo', 'Ver Detalle del Producto')
+@section('titulo', 'Ver Producto')
 
 @section('contenido')
 <div class="container mt-4">
-    <div class="card shadow-sm">
+    <div class="card shadow-sm text-center">
         <div class="card-header bg-info text-white">
             <h4 class="mb-0">Detalle del Producto #{{ $producto->id }}</h4>
         </div>
@@ -26,9 +26,9 @@
             </p>
         </div>
         <div class="card-footer">
-            <div class="d-flex gap-2">
-                <a href="{{ route('productos') }}" class="btn btn-secondary">Volver</a>
-                <a href="{{ route('productos.editP', $producto->id) }}" class="btn btn-warning">Editar Producto</a>
+            <div class="d-flex gap-2 justify-content-center">
+                <a href="{{ route('productos') }}" class="btn btn-outline-secondary">Volver</a>
+                <a href="{{ route('productos.editP', $producto->id) }}" class="btn btn-outline-primary">Editar Producto</a>
             </div>
         </div>
     </div>
