@@ -1,7 +1,5 @@
 @extends('layouts.base')
-
 @section('titulo', 'Nueva tarea')
-
 @section('contenido')
 <h2 class="text-center mb-4">Nueva tarea</h2>
 <div class="container mt-4">
@@ -23,12 +21,8 @@
             <label for="entrega" class="form-label">Fecha de entrega</label>
             <input type="date" class="form-control" id="entrega" name="entrega">
         </div>
-        <div class="mb-3">
-            <label for="acciones" class="form-label">Acciones</label>
-            <input type="text" class="form-control" id="acciones" name="acciones">
-        </div>
         <button type="submit" class="btn btn-primary">Crear</button>
-        <a href="{{ route('tareas.tareas') }}" class="btn btn-secondary">Cancelar</a>
+        <a href="{{ route('tareas') }}" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>
 @endsection
