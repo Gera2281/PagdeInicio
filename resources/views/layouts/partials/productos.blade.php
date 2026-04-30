@@ -9,7 +9,7 @@
 </div>
 <div class="row g-5 text-center">
     @foreach ($productos as $producto)
-    <div class="col-6 col-md-4 col-lg-3">
+    <div class="col-6 col-md-3 col-lg-3">
         @component('layouts.componentes.card')
         @slot('image', $producto->imagen)
         @slot('title', $producto->titulo)

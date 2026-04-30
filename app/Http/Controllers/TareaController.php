@@ -25,6 +25,16 @@ class TareaController
 
     public function storeT(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required|min:3',
+            'descripcion' => 'required|min:5',
+        ], [
+            'nombre.required' => 'El nombre es obligatorio.',
+            'nombre.min' => 'El nombre debe tener al menos 3 caracteres.',
+            'descripcion.required' => 'La descripción es obligatoria.',
+            'descripcion.min' => 'La descripción debe tener al menos 5 caracteres.',
+        ]);
+
         $tarea = new Tarea();
         $tarea->nombre = $request->nombre;
         $tarea->descripcion = $request->descripcion;
@@ -32,7 +42,7 @@ class TareaController
         $tarea->entrega = $request->entrega;
         $tarea->save();
 
-        return redirect()->route('tareas');
+        return redirect()->route('tarea.index')->with('success', 'Nueva Tarea creada');
     }
 
     public function editT($id)
@@ -43,6 +53,16 @@ class TareaController
 
     public function updateT(Request $request, $id)
     {
+        $request->validate([
+            'nombre' => 'required|min:3',
+            'descripcion' => 'required|min:5',
+        ], [
+            'nombre.required' => 'El nombre es obligatorio.',
+            'nombre.min' => 'El nombre debe tener al menos 3 caracteres.',
+            'descripcion.required' => 'La descripción es obligatoria.',
+            'descripcion.min' => 'La descripción debe tener al menos 5 caracteres.',
+        ]);
+
         $tarea = Tarea::findOrFail($id);
         $tarea->nombre = $request->nombre;
         $tarea->descripcion = $request->descripcion;
@@ -50,7 +70,7 @@ class TareaController
         $tarea->entrega = $request->entrega;
         $tarea->save();
 
-        return redirect()->route('tareas');
+        return redirect()->route('tarea.index')->with('success', 'Tarea actualizada');
     }
 
     public function destroyT($id)
@@ -58,7 +78,7 @@ class TareaController
         $tarea = Tarea::findOrFail($id);
         $tarea->delete();
 
-        return redirect()->route('tareas');
+        return redirect()->route('tarea.index')->with('danger', 'Tarea borrada');
     }
 
     // Ver detalle

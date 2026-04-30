@@ -26,5 +26,8 @@ class DatabaseSeeder extends Seeder
                 'password' => \Illuminate\Support\Facades\Hash::make($password),
             ]
         );
+
+        $this->call(Tareaseeder::class);
+        $this->call(Productoseeder::class);
     }
 }

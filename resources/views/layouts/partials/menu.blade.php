@@ -4,7 +4,7 @@
         <div class="ms-4">
             <a class="text-white me-3" href="{{ url('/') }}">Inicio</a>
             <a class="text-white me-3" href="{{ url('/productos') }}">Productos</a>
-            <a class="text-white me-3" href="{{ url('/tareas') }}">Tareas</a>
+            <a class="text-white me-3" href="{{ route('tarea.index') }}">Tareas</a>
             <!--
             <a class="text-white me-3" href="{{ url('/productos') }}">Productos</a>
             -->

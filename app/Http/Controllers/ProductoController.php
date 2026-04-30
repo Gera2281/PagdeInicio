@@ -43,7 +43,7 @@ class ProductoController
         $producto->precio = $request->precio;
         $producto->save();
 
-        return redirect()->route('productos');
+        return redirect()->route('productos')->with('success', 'Nuevo Producto creado');
     }
 
     /**
@@ -84,7 +84,8 @@ class ProductoController
         $producto->precio = $request->precio;
         $producto->save();
 
-        return redirect()->route('productos');
+        return redirect()->route('productos')->with('success', 'Tarea actualizada');
+
     }
 
     /**
