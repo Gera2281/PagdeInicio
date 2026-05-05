@@ -11,7 +11,7 @@ class Tareaseeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    /*public function run(): void
     {
         Tarea::create([
             'nombre' => 'tareaseed1',
@@ -20,5 +20,8 @@ class Tareaseeder extends Seeder
             'entrega' => '2022-01-01',
             
         ]);
+    }*/
+    public function run(): void{
+        Tarea::factory()->count(3)->create();
     }
 }
